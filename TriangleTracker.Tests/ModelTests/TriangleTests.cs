@@ -20,7 +20,7 @@ namespace TriangleTracker.Tests
     [TestMethod]
     public void IsTriangle_ReturnsTrueWhenAnySumOfTwoSidesIsGreaterThanThird_True()
     {
-      Triangle testTriangle = new Triangle(2,3,12);
+      Triangle testTriangle = new Triangle(2,3,2);
       Assert.AreEqual(true, testTriangle.IsTriangle());
     }
   }
