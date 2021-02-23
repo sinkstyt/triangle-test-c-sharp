@@ -14,8 +14,16 @@ namespace TriangleTracker
     }
     public bool IsTriangle()
     {
+      if ((Side1 + Side2 > Side3) || (Side2 + Side3 > Side1) || (Side1 + Side3 > Side2))
+      {
       return false;
+      }
+    else
+      return true;
     }
-
+    public string checkType()
+    {
+      return "triangle time";
+    }
   }
 }
