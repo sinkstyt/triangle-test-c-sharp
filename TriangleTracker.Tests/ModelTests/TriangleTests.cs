@@ -1,7 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Shapes;
+using TriangleTracker;
 
-namespace Triangle.Tests
+
+namespace TriangleTracker.Tests
 {
   [TestClass]
   public class TriangleTests
@@ -9,7 +10,8 @@ namespace Triangle.Tests
     [TestMethod]
     public void IsTriangle_AnyTwoSidesSumToLessThanThird_True()
     {
-      
+      Triangle testTriangle = new Triangle();
+      Assert.AreEqual(true, testTriangle.IsTriangle());
     }
   }
 }
