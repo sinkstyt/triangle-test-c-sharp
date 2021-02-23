@@ -7,18 +7,28 @@ namespace TriangleTracker.Tests
   [TestClass]
   public class TriangleTests
   {
+
     [TestMethod]
-    public void Triangle_testTriangle_True()
+    public void Triangle_MakesInstanceOfTriangleWithThreeSideLengths_True()
     {
       Triangle testTriangle = new Triangle(2,3,5);
-      Assert.AreEqual(true, testTriangle.IsTriangle());
+      Assert.AreEqual(2, testTriangle.Side1);
+      Assert.AreEqual(3, testTriangle.Side2);
+      Assert.AreEqual(5, testTriangle.Side3);
     }
 
     [TestMethod]
-    public void Triangle_testConstructor_True()
+    public void IsTriangle_ReturnsTrueWhenAnySumOfTwoSidesIsGreaterThanThird_True()
     {
-      Triangle testTriangle = new Triangle(2,3,5);
-      Assert.AreEqual(3, testTriangle.Side1);
+      Triangle testTriangle = new Triangle(2,3,12);
+      Assert.AreEqual(true, testTriangle.IsTriangle());
     }
   }
 }
+
+// [TestMethod]
+// public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+// {
+//   // any necessary logic to prep for test; instantiating new classes, etc.
+//   Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
+// }
