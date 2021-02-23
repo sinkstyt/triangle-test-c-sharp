@@ -8,10 +8,17 @@ namespace TriangleTracker.Tests
   public class TriangleTests
   {
     [TestMethod]
-    public void IsTriangle_AnyTwoSidesSumToLessThanThird_True()
+    public void Triangle_testTriangle_True()
     {
-      Triangle testTriangle = new Triangle();
+      Triangle testTriangle = new Triangle(2,3,5);
       Assert.AreEqual(true, testTriangle.IsTriangle());
+    }
+
+    [TestMethod]
+    public void Triangle_testConstructor_True()
+    {
+      Triangle testTriangle = new Triangle(2,3,5);
+      Assert.AreEqual(3, testTriangle.Side1);
     }
   }
 }

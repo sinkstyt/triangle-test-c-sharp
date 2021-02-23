@@ -1,11 +1,21 @@
-namespace Shapes
+namespace TriangleTracker
 {
   public class Triangle
   {
-    public bool IsTriangle(int side1, int side2, int side3)
+    public int Side1 { get; set; }
+    public int Side2 { get; set; }
+    public int Side3 { get; set; }
+
+    public Triangle(int side1, int side2, int side3)
     {
-      // logic will go here
+        Side1 = side1;
+        Side2 = side2;
+        Side3 = side3;
+    }
+    public bool IsTriangle()
+    {
       return false;
     }
+
   }
 }
